@@ -5,7 +5,7 @@ function findAndSymlink() {
 
 	for f in $(find ~+ -type f -name "$1"); do
 		echo "Symlinked $f"
-		ln -s $f "$rootDir/.git/hooks/$1"
+		ln -fs $f "$rootDir/.git/hooks/$1"
 		break
 	done
 }
